@@ -9,7 +9,7 @@ class SymbolicTransformation():
                  sequence_string,
                  variables=None,
                  f_of_t=None,
-                 simplify=False):
+                 simplify=True):
         self._seq = sequence_string
         self._tokens = SymbolicTransformation._tokens_from_sequence(self._seq)
         self._tfs = [sp.eye(4)] * (len(self._tokens) + 1)

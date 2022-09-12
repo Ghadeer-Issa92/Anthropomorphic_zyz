@@ -19,7 +19,7 @@ class Antropomorphic_xyx(Robot):
                   (-360.0, 360.0))
     
     def __init__(self, T_base=None, T_tool=None,
-                 lengths=None, save=True, offsets=None, directions=None):
+                 lengths=None, save=False, offsets=None, directions=None):
         """
         Prepares all necessary values and loads pickled matrices
         Args:
@@ -69,12 +69,6 @@ class Antropomorphic_xyx(Robot):
         value_pairs = []
         for i in range(len(self._ls)):
             value_pairs.append((f"l_{i}", self._ls[i]))
-
-        #self.d = np.sqrt(self._ls[4] * self._ls[4] + self._ls[5] * self._ls[5])
-        #self.dq = np.arctan2(self._ls[4], self._ls[5])
-
-        #value_pairs.append(("d", self.d))
-        #value_pairs.append(("dq", self.dq))
 
         self._value_pairs = value_pairs
 
