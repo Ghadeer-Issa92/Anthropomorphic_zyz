@@ -25,7 +25,7 @@ def main():
 
     robot = Antropomorphic_xyx(T_base=T_base, T_tool=T_tool)
 
-    qs = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    qs = [np.pi/2, 0.0, np.pi/2, np.pi/3, 0.0, 0.0]
 
     T = robot.forward_kinematics(qs, plot=True)
 
@@ -35,6 +35,20 @@ def main():
 
     print("Real Qs:")
     print(qs)
+
+    T_IK = T
+
+    qs = robot.inverse_kinematics(T_IK, m=-1, w=1)
+
+    print()
+    print("IK Qs:")
+    print(qs)
+
+    T_res = robot.forward_kinematics(qs, plot=True)
+
+    print()
+    print("After inverse kinematics:")
+    print(T_res)
 
 if __name__ == '__main__':
     main()

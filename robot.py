@@ -6,7 +6,7 @@ import sympy as sp
 from abc import ABC, abstractmethod
 
 class Robot(ABC):
-    epsilon: 1e-5
+    epsilon = 1e-5
 
     @abstractmethod
     def forward_kinematics(slef, q_values):
