@@ -10,7 +10,7 @@ from utils.robo_math import Transformation
 from utils.plot_utils import TransformationPlotter
 
 
-class Antropomorphic_xyx(Robot):
+class Anthropomorphic_zyz(Robot):
     qs_lim_deg = ((-185.0, 185.0),
                   (-90.0, 90.0),
                   (-156.0, 156.0),

@@ -3,7 +3,7 @@ Fanuc FK and IK usage example
 """
 import numpy as np
 
-from Antropomorphic_xyx import Antropomorphic_xyx
+from Anthropomorphic_zyz import Anthropomorphic_zyz
 
 
 def main():
@@ -23,7 +23,7 @@ def main():
         [0, 0, 0, 1]
     ])
 
-    robot = Antropomorphic_xyx(T_base=T_base, T_tool=T_tool)
+    robot = Anthropomorphic_zyz(T_base=T_base, T_tool=T_tool)
     pi = np.pi
     qs = [0.0, pi/2, 0.0, 0.0, 0.0, 0.0]
 
