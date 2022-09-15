@@ -25,7 +25,7 @@ def main():
 
     robot = Anthropomorphic_zyz(T_base=T_base, T_tool=T_tool)
     pi = np.pi
-    qs = [pi/4, 0.0, pi/2, 0.0, 0.0, pi/2]
+    qs = [pi/6, pi/6, pi/2, pi/4, pi/4, pi/2]
 
     T = robot.forward_kinematics(qs, plot=True)
 
