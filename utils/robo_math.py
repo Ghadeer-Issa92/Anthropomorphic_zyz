@@ -166,39 +166,8 @@ class SymbolicTransformation():
             s = sp.Symbol(symbol)
         return s
 
-    @staticmethod
-    def get_jacobian_column(J):
-        return sp.Matrix([
-            J[0, 3],
-            J[1, 3],
-            J[2, 3],
-            J[2, 1],
-            J[0, 2],
-            J[1, 0],
-        ])
 
-    @staticmethod
-    def get_scew(x, y, z, f_of_t=False):
-        x = SymbolicTransformation._get_symbol(x, f_of_t)
-        y = SymbolicTransformation._get_symbol(y, f_of_t)
-        z = SymbolicTransformation._get_symbol(z, f_of_t)
-        return sp.Matrix([
-            [0, -z, y],
-            [z, 0, -x],
-            [-y, x, 0],
-        ])
 
-    @staticmethod
-    def get_inertia_matrix(index=0):
-        Ixx = sp.symbols(f"Ixx_{index}")
-        Iyy = sp.symbols(f"Iyy_{index}")
-        Izz = sp.symbols(f"Izz_{index}")
-        Ixy = sp.symbols(f"Ixy_{index}")
-        Iyz = sp.symbols(f"Iyz_{index}")
-        Ixz = sp.symbols(f"Ixz_{index}")
-        return sp.Matrix([[Ixx, Ixy, Ixz],
-                          [Ixy, Iyy, Iyz],
-                          [Ixz, Iyz, Izz]])
 
     @staticmethod
     def get_Tx(symbol='x', f_of_t=False):
@@ -426,24 +395,6 @@ class Transformation():
         new_values = self._values[::-1]
         return Transformation(new_sequence, new_values)
 
-    @staticmethod
-    def get_jacobian_column(J):
-        return sp.Matrix([
-            J[0, 3],
-            J[1, 3],
-            J[2, 3],
-            J[2, 1],
-            J[0, 2],
-            J[1, 0],
-        ])
-
-    @staticmethod
-    def get_scew(x, y, z):
-        return sp.Matrix([
-            [0, -z, y],
-            [z, 0, -x],
-            [-y, x, 0],
-        ])
 
     @staticmethod
     def get_angles(R):
