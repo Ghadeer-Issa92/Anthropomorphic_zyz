@@ -254,7 +254,7 @@ class Antropomorphic_xyx(Robot):
         #     q_3 = 0.0
         #     q_4 = 0.0
         #     q_5 = 0.0
-        q_5 = np.arctan2(r_32, -r_31)
+        q_5 = np.arctan2(r_32, r_31)
         q_3 = np.arctan2(r_23, r_13)
         q_4 = np.arctan2(np.sqrt(r_31**2 + r_32**2), r_33)
 
