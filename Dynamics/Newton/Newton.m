@@ -45,7 +45,7 @@ w_0_0=[0;0;0];dw_0_0=[0;0;0];
 z_0=[0;0;1];
 r_c_1=[0;0;lc1];
 r_0_1=[0;0;l1];
-R_0_1=HT('R','z',q_1);
+R_0_1=RotM('z',q_1);
 
 % forward 
 
@@ -59,7 +59,7 @@ ddpc_1=com_acceleration(ddp_1,dw_1_1,w_1_1,r_c_1);
 z_1=[0;1;0];
 r_c_2=[0;0;lc2];
 r_1_2=[0;0;l2];
-R_1_2=HT('R','y',q_2);
+R_1_2=RotM('y',q_2);
 
 w_2_2=w_velocity('R',w_1_1,R_1_2,dq_2,z_1);
 dw_2_2=w_acceleration('R',dw_1_1,w_1_1,R_1_2,dq_2,ddq_2,z_1);
@@ -71,7 +71,7 @@ ddpc_2=com_acceleration(ddp_2,dw_2_2,w_2_2,r_c_2);
 z_2=[0;1;0];
 r_c_3=[0;0;lc3];
 r_2_3=[0;0;l3];
-R_2_3=HT('R','y',q_3);
+R_2_3=RotM('y',q_3);
 
 w_3_3=w_velocity('R',w_2_2,R_2_3,dq_3,z_2);
 dw_3_3=w_acceleration('R',dw_2_2,w_2_2,R_2_3,dq_3,ddq_3,z_2);
@@ -83,7 +83,7 @@ ddpc_3=com_acceleration(ddp_3,dw_3_3,w_3_3,r_c_3);
 z_3=[0;0;1];
 r_c_4=[0;0;lc4];
 r_3_4=[0;0;l4];
-R_3_4=HT('R','z',q_4);
+R_3_4=RotM('z',q_4);
 
 w_4_4=w_velocity('R',w_3_3,R_3_4,dq_4,z_3);
 dw_4_4=w_acceleration('R',dw_3_3,w_3_3,R_3_4,dq_4,ddq_4,z_3);
@@ -96,7 +96,7 @@ ddpc_4=com_acceleration(ddp_4,dw_4_4,w_4_4,r_c_4);
 z_4=[0;1;0];
 r_c_5=[0;0;lc5];
 r_4_5=[0;0;l5];
-R_4_5=HT('R','y',q_5);
+R_4_5=RotM('y',q_5);
 
 w_5_5=w_velocity('R',w_4_4,R_4_5,dq_5,z_4);
 dw_5_5=w_acceleration('R',dw_4_4,w_4_4,R_4_5,dq_5,ddq_5,z_4);
@@ -107,7 +107,7 @@ ddpc_5=com_acceleration(ddp_5,dw_5_5,w_5_5,r_c_5);
 z_5=[0;0;1];
 r_c_6=[0;0;lc6];
 r_5_6=[0;0;l6];
-R_5_6=HT('R','z',q_6);
+R_5_6=RotM('z',q_6);
 
 w_6_6=w_velocity('R',w_5_5,R_5_6,dq_6,z_5);
 dw_6_6=w_acceleration('R',dw_5_5,w_5_5,R_5_6,dq_6,ddq_6,z_5);
